@@ -1,4 +1,4 @@
-<div class="nested-fields" style="width: 40%; margin-left: 20%;">
+<div class="nested-fields" style="width:100%">
 
   <%= f.fields_for field.association_name do |nested_form| %>
     <%= render(
@@ -10,7 +10,7 @@
     ) %>
   <% end %>
 
-  <div>
+  <div class="field-unit">
     <%= link_to_add_association(
       # TODO I18n
       "Add #{field.associated_class_name.titleize}",
@@ -20,4 +20,5 @@
       render_options: { locals: { field: field } },
     ) %>
   </div>
-</div>
+
+<div>
